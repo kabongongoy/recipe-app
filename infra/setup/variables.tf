@@ -1,11 +1,11 @@
 variable "tf_state_bucket" {
   description = "Name of S3 bucket in AWS for storing TF state"
-  default     = "devops-recipe-app-api-state"
+  default     = "hoitcs-tf-state-recipe-ap"
 }
 
 variable "tf_state_lock_table" {
   description = "Name of DynamoDB table for TF state locking"
-  default     = "devops-recipe-app-api-tf-lock"
+  default     = "recipe-app-lock"
 }
 
 variable "project" {
@@ -15,5 +15,5 @@ variable "project" {
 
 variable "contact" {
   description = "Contact name for tagging resources"
-  default     = "mark@example.com"
+  default     = "henry@example.com"
 }

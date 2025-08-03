@@ -7,12 +7,12 @@ terraform {
   }
 
   backend "s3" {
-    bucket               = "devops-recipe-app-api-state"
-    key                  = "tf-state-deploy"
-    workspace_key_prefix = "tf-state-deploy-env"
+    bucket               = "hoitcs-tf-state"
+    key                  = "recipe-api/tf-deploy-setup"
     region               = "us-east-1"
     encrypt              = true
-    dynamodb_table       = "devops-recipe-app-api-tf-lock"
+    workspace_key_prefix = "tf-state-deploy-env"
+    dynamodb_table       = "recipe-app-lock"
   }
 }
 
@@ -33,3 +33,4 @@ locals {
 }
 
 data "aws_region" "current" {}
+

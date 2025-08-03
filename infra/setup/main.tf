@@ -7,11 +7,11 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "devops-recipe-app-api-state"
-    key            = "tf-state-setup"
+    bucket         = "hoitcs-tf-state"
+    key            = "recipe-api/tf-state-setup"
     region         = "us-east-1"
     encrypt        = true
-    dynamodb_table = "devops-recipe-app-api-tf-lock"
+    dynamodb_table = "recipe-app-lock"
   }
 }
 

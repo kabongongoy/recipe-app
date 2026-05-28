@@ -3,7 +3,7 @@
 #######################################################################
 
 resource "aws_iam_user" "cd" {
-  name = "recipe-app-cd"
+  name = "app-cd"
 }
 
 resource "aws_iam_access_key" "cd" {
